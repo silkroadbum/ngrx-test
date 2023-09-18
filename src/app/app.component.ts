@@ -26,6 +26,5 @@ export class AppComponent {
 
   clear() {
     this.updateAt = Date.now();
-    this.counter = 0;
-  }
+    this.counter = 0;  }
 }
