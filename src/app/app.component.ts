@@ -5,6 +5,27 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
-  title = 'my-app';
+  counter= 0;
+  updateAt?: number;
+
+  get cannotDecrease(): boolean {
+    return this.counter <=0;
+  }
+
+  increase() {
+    this.updateAt = Date.now();
+    this.counter++;
+  }
+
+  decrease() {
+    this.updateAt = Date.now();
+    this.counter--;
+  }
+
+  clear() {
+    this.updateAt = Date.now();
+    this.counter = 0;
+  }
 }
